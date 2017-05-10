@@ -1,0 +1,36 @@
+{
+  "name": "gumga-query-filter-ng",
+  "description": "Gumga Query Filter",
+  "main": "./src/index.js",
+  "authors": [
+    "Gumga Tecnologia da Informação S/A"
+  ],
+  "license": "LGPL-3.0",
+  "keywords": [
+    "gumga",
+    "query",
+    "filter",
+    "angular",
+    "1.x"
+  ],
+  "homepage": "https://github.com/guiseek/gumga-query-filter-ng",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.8"
+  },
+  "_release": "48c71b24c4",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "48c71b24c4b711c428165f1840a6aaa7e02c8634"
+  },
+  "_source": "https://github.com/GUMGA/gumga-query-filter-ng.git",
+  "_target": "*",
+  "_originalSource": "gumga-query-filter-ng"
+}

@@ -1,0 +1,31 @@
+{
+  "name": "gumga-translate-ng",
+  "version": "1.0.2",
+  "description": "Gumga Translate",
+  "main": "./src/index.js",
+  "authors": [
+    "Gumga Tecnologia da Informação S/A"
+  ],
+  "license": "LGPL-3.0",
+  "keywords": [
+    "Gumga",
+    "Translate"
+  ],
+  "homepage": "https://github.com/guiseek/gumga-translate-ng",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "1.0.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.2",
+    "commit": "bb14f2b40fe3cc0b5deb02a69a905db1b355abb0"
+  },
+  "_source": "https://github.com/GUMGA/gumga-translate-ng.git",
+  "_target": "*",
+  "_originalSource": "gumga-translate-ng"
+}

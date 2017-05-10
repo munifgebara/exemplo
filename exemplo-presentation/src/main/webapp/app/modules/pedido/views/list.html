@@ -1,0 +1,81 @@
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <div class="panel gmd">
+            <div class="panel-heading"><label class="control-label" gumga-translate-tag="pedido"></label>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+
+                    <div class="col-sm-5">
+                        <a ui-sref="pedido.insert" class="btn gmd raised btn-primary">
+                            <i class="glyphicon glyphicon-plus"></i>Novo
+                        </a>
+
+                        <button type="button" class="btn gmd raised btn-danger"
+                                ng-click="pedido.methods.delete(selectedValues)"
+                                gumga-confirm="Deseja remover?">
+                            <i class="glyphicon glyphicon-trash"></i>Remover
+                        </button>
+                    </div>
+
+                    <div class="col-sm-7">
+                        <gumga-query search="pedido.methods.search(field,param)"
+                                     advanced-search="pedido.methods.advancedSearch(param)"
+                                     saved-filters="pedido.methods.getQuery(page)">
+                            <search-field label="cliente"
+                                          field="cliente"></search-field>
+                            <search-field label="itens"
+                                          field="itens"></search-field>
+                            <advanced-search-field type="string" label="cliente"
+                                                   field="cliente"></advanced-search-field>
+                            <advanced-search-field type="string" label="itens"
+                                                   field="itens"></advanced-search-field>
+                        </gumga-query>
+                    </div>
+                </div>
+
+                <br>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <gumga-query-action
+                                entity="pedido"
+                                selected="selectedValues"
+                                query="query"
+                                beyond="beyond"
+                                actions="actions"
+                                on-action="action(queryaction)">
+                        </gumga-query-action>
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <gumga-list sort="pedido.methods.sort(field, dir)"
+                                    class="table-striped table-condensed"
+                                    data="pedido.data"
+                                    configuration="tableConfig">
+                        </gumga-list>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <ul uib-pagination
+                            ng-model="page"
+                            max-size="10"
+                            boundary-links="true"
+                            previous-text="‹"
+                            next-Text="›"
+                            first-text="«"
+                            last-text="»"
+                            items-per-page="pedido.pageSize"
+                            total-items="pedido.count"
+                            ng-change="pedido.methods.get(page)">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

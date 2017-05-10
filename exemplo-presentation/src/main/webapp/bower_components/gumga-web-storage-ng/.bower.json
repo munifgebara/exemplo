@@ -1,0 +1,34 @@
+{
+  "name": "gumga-web-storage-ng",
+  "description": "Gumga WebStorage",
+  "main": "./src/webstorage.js",
+  "authors": [
+    "Gumga Tecnologia da Informação S/A"
+  ],
+  "license": "LGPL-3.0",
+  "keywords": [
+    "gumga",
+    "webstorage",
+    "angular 1.x"
+  ],
+  "homepage": "https://github.com/GUMGA/gumga-web-storage-ng",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.8"
+  },
+  "_release": "ef116b7ed8",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "ef116b7ed8631f6d074b95c6c1822a506d2bfd8e"
+  },
+  "_source": "https://github.com/GUMGA/gumga-web-storage-ng.git",
+  "_target": "*",
+  "_originalSource": "gumga-web-storage-ng"
+}

@@ -1,0 +1,37 @@
+cd exemplo-domain/
+mvn io.gumga:gumgag:entidade -Dentidade=br.com.gumgademo.exemplo.domain.model.Categoria  -Datributos="nome:String"
+mvn io.gumga:gumgag:entidade -Dentidade=br.com.gumgademo.exemplo.domain.model.Grupo  -Datributos="nome:String,produtos:Set<Produto>:@ManyToMany"
+mvn io.gumga:gumgag:entidade -Dentidade=br.com.gumgademo.exemplo.domain.model.Pedido  -Datributos="cliente:String,itens:List<ItemPedido>:@OneToMany"
+mvn io.gumga:gumgag:entidade -Dentidade=br.com.gumgademo.exemplo.domain.model.ItemPedido  -Datributos="quantidade:Integer,produto:Produto:@ManyToOne"
+mvn io.gumga:gumgag:entidade -Dentidade=br.com.gumgademo.exemplo.domain.model.Produto -Datributos="nome:String,quantidade:Integer,categoria:Categoria:@ManyToOne"
+mvn clean install
+
+cd target/docs/
+./dot2png.sh 
+eog . 
+
+cd ..
+cd exemplo-application/
+mvn io.gumga:gumgag:aplicacao -Dentidade=br.com.gumgademo.exemplo.domain.model.Categoria  
+mvn io.gumga:gumgag:aplicacao -Dentidade=br.com.gumgademo.exemplo.domain.model.Grupo  
+mvn io.gumga:gumgag:aplicacao -Dentidade=br.com.gumgademo.exemplo.domain.model.Pedido 
+mvn io.gumga:gumgag:aplicacao -Dentidade=br.com.gumgademo.exemplo.domain.model.ItemPedido  
+mvn io.gumga:gumgag:aplicacao -Dentidade=br.com.gumgademo.exemplo.domain.model.Produto 
+
+cd ..
+cd exemplo-api/
+mvn io.gumga:gumgag:api -Dentidade=br.com.gumgademo.exemplo.domain.model.Categoria  
+mvn io.gumga:gumgag:api -Dentidade=br.com.gumgademo.exemplo.domain.model.Grupo  
+mvn io.gumga:gumgag:api -Dentidade=br.com.gumgademo.exemplo.domain.model.Pedido 
+mvn io.gumga:gumgag:api -Dentidade=br.com.gumgademo.exemplo.domain.model.Pedido 
+mvn io.gumga:gumgag:api -Dentidade=br.com.gumgademo.exemplo.domain.model.ItemPedido  
+mvn io.gumga:gumgag:api -Dentidade=br.com.gumgademo.exemplo.domain.model.Produto 
+
+cd ..
+cd exemplo-presentation/
+mvn io.gumga:gumgag:apresentacao -Dentidade=br.com.gumgademo.exemplo.domain.model.Categoria  
+mvn io.gumga:gumgag:apresentacao -Dentidade=br.com.gumgademo.exemplo.domain.model.Grupo  
+mvn io.gumga:gumgag:apresentacao -Dentidade=br.com.gumgademo.exemplo.domain.model.Pedido 
+mvn io.gumga:gumgag:apresentacao -Dentidade=br.com.gumgademo.exemplo.domain.model.Produto  -Doverride=true
+
+

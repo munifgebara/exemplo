@@ -1,0 +1,37 @@
+{
+  "name": "gumga-login",
+  "version": "2.1.0",
+  "homepage": "https://github.com/GUMGA/login",
+  "authors": [
+    "Gui Seek <guiseek@gmail.com>",
+    "Gui Nabo <neoheartz@gmail.com>"
+  ],
+  "description": "Gumga Login",
+  "moduleType": [
+    "es6"
+  ],
+  "keywords": [
+    "gumga",
+    "login"
+  ],
+  "license": "GPL-3.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.5.8"
+  },
+  "_release": "2.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.1.0",
+    "commit": "e3ba2760d5fed70e5e5d6682af98096a0f4cfccf"
+  },
+  "_source": "https://github.com/GUMGA/login.git",
+  "_target": "*",
+  "_originalSource": "gumga-login"
+}

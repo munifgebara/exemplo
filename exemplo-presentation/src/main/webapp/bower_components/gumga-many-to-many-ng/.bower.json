@@ -1,0 +1,35 @@
+{
+  "name": "gumga-many-to-many-ng",
+  "description": "Gumga Many To Many",
+  "main": "./src/many-to-many.js",
+  "authors": [
+    "Gumga Tecnologia da Informação S/A"
+  ],
+  "license": "LGPL-3.0",
+  "keywords": [
+    "gumga",
+    "many to many",
+    "angular 1.x"
+  ],
+  "homepage": "https://github.com/GUMGA/gumga-many-to-many-ng",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.8",
+    "angular-bootstrap": "2.3.2"
+  },
+  "_release": "e33b6b5bcf",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "e33b6b5bcfe2cb6a022c2a0cf1228ffb71ebf4b7"
+  },
+  "_source": "https://github.com/GUMGA/gumga-many-to-many-ng.git",
+  "_target": "*",
+  "_originalSource": "gumga-many-to-many-ng"
+}

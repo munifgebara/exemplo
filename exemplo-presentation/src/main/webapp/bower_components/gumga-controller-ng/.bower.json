@@ -1,0 +1,34 @@
+{
+  "name": "gumga-controller-ng",
+  "description": "Gumga Controller",
+  "main": "./src/controller.js",
+  "authors": [
+    "Gumga Tecnologia da Informação S/A"
+  ],
+  "license": "LGPL-3.0",
+  "keywords": [
+    "gumga",
+    "controller",
+    "angular 1.x"
+  ],
+  "homepage": "https://github.com/GUMGA/gumga-controller-ng",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.8"
+  },
+  "_release": "0c541c1c9a",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "0c541c1c9a56e89bfc1c574ea56a7f4b75fcc891"
+  },
+  "_source": "https://github.com/GUMGA/gumga-controller-ng.git",
+  "_target": "*",
+  "_originalSource": "gumga-controller-ng"
+}

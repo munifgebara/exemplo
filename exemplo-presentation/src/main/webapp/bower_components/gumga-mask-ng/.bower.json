@@ -1,0 +1,32 @@
+{
+  "name": "gumga-mask-ng",
+  "description": "Gumga Mask (Angular 1.x)",
+  "main": "./src/mask.js",
+  "authors": [
+    "Gumga Tecnologia da Informação S/A"
+  ],
+  "license": "LGPL-3.0",
+  "keywords": [
+    "Gumga",
+    "Mask",
+    "Angular",
+    "1.x"
+  ],
+  "homepage": "https://github.com/guiseek/gumga-mask-ng",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "6514cd7fdf",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "6514cd7fdf93151a9c966909dc2b7a0950a848e9"
+  },
+  "_source": "https://github.com/GUMGA/gumga-mask-ng.git",
+  "_target": "*",
+  "_originalSource": "gumga-mask-ng"
+}

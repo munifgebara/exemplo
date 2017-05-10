@@ -1,0 +1,61 @@
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <div class="panel gmd">
+            <div class="panel-heading"><label class="control-label" gumga-translate-tag="produto.title"></label>
+            </div>
+            <div class="panel-body">
+                <form name="ProdutoForm" gumga-form novalidate>
+		
+		<gmd-input>
+			<input
+					class="form-control gmd"
+					type="text"
+                    name="nome"
+					gumga-error
+                    ng-model="produto.data.nome"
+					/>
+			<span class="bar"></span>
+			<label
+					class="control-label"
+					gumga-translate-tag="produto.nome">nome</label>
+		</gmd-input>
+		
+		<gmd-input>
+			<input
+					class="form-control gmd"
+					type="text"
+                    name="quantidade"
+					gumga-error
+                    ng-model="produto.data.quantidade"
+					/>
+			<span class="bar"></span>
+			<label
+					class="control-label"
+					gumga-translate-tag="produto.quantidade">quantidade</label>
+		</gmd-input>
+		
+		<label gumga-translate-tag="produto.categoria">categoria</label>
+	    <gumga-many-to-one
+				class="gmd"
+	            name="categoria"
+	            value="produto.data.categoria"
+	            search-method="categoria.methods.asyncSearch('nome', param)"
+	            field="nome"
+	            authorize-add="false"
+	            display-info="false"
+	            post-method="categoria.methods.asyncPost(value, 'nome')">
+	    </gumga-many-to-one>
+                    <gumga-errors label="Lista de erros" title="Lista de erros"></gumga-errors>
+                    <gumga-form-buttons
+                            back="produto.list"
+                            submit="produto.methods.put(produto.data)"
+                            position="right"
+                            valid="ProdutoForm.$valid"
+                            confirm-dirty="true"
+                            continue="continue">
+                    </gumga-form-buttons>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,77 @@
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <div class="panel gmd">
+            <div class="panel-heading"><label class="control-label" gumga-translate-tag="categoria"></label>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+
+                    <div class="col-sm-5">
+                        <a ui-sref="categoria.insert" class="btn gmd raised btn-primary">
+                            <i class="glyphicon glyphicon-plus"></i>Novo
+                        </a>
+
+                        <button type="button" class="btn gmd raised btn-danger"
+                                ng-click="categoria.methods.delete(selectedValues)"
+                                gumga-confirm="Deseja remover?">
+                            <i class="glyphicon glyphicon-trash"></i>Remover
+                        </button>
+                    </div>
+
+                    <div class="col-sm-7">
+                        <gumga-query search="categoria.methods.search(field,param)"
+                                     advanced-search="categoria.methods.advancedSearch(param)"
+                                     saved-filters="categoria.methods.getQuery(page)">
+                            <search-field label="nome"
+                                          field="nome"></search-field>
+                            <advanced-search-field type="string" label="nome"
+                                                   field="nome"></advanced-search-field>
+                        </gumga-query>
+                    </div>
+                </div>
+
+                <br>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <gumga-query-action
+                                entity="categoria"
+                                selected="selectedValues"
+                                query="query"
+                                beyond="beyond"
+                                actions="actions"
+                                on-action="action(queryaction)">
+                        </gumga-query-action>
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <gumga-list sort="categoria.methods.sort(field, dir)"
+                                    class="table-striped table-condensed"
+                                    data="categoria.data"
+                                    configuration="tableConfig">
+                        </gumga-list>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <ul uib-pagination
+                            ng-model="page"
+                            max-size="10"
+                            boundary-links="true"
+                            previous-text="‹"
+                            next-Text="›"
+                            first-text="«"
+                            last-text="»"
+                            items-per-page="categoria.pageSize"
+                            total-items="categoria.count"
+                            ng-change="categoria.methods.get(page)">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,111 @@
+[
+	{
+		"type": "item",
+		"label": "Pedido",
+		"key": "CRUD-Pedido",
+		"children": [
+				{
+					"type": "item",
+					"label": "Inserir",
+					"state": "pedido.insert",
+					"key": "CRUD-Pedido"
+				},
+				{
+					"type": "item",
+					"label": "Listagem",
+					"state": "pedido.list",
+					"key": "CRUD-Pedido"
+				}
+			]
+	},
+
+	{
+		"type": "item",
+		"label": "Grupo",
+		"key": "CRUD-Grupo",
+		"children": [
+				{
+					"type": "item",
+					"label": "Inserir",
+					"state": "grupo.insert",
+					"key": "CRUD-Grupo"
+				},
+				{
+					"type": "item",
+					"label": "Listagem",
+					"state": "grupo.list",
+					"key": "CRUD-Grupo"
+				}
+			]
+	},
+
+	{
+		"type": "item",
+		"label": "Categoria",
+		"key": "CRUD-Categoria",
+		"children": [
+				{
+					"type": "item",
+					"label": "Inserir",
+					"state": "categoria.insert",
+					"key": "CRUD-Categoria"
+				},
+				{
+					"type": "item",
+					"label": "Listagem",
+					"state": "categoria.list",
+					"key": "CRUD-Categoria"
+				}
+			]
+	},
+
+	{
+		"type": "item",
+		"label": "Produto",
+		"key": "CRUD-Produto",
+		"children": [
+				{
+					"type": "item",
+					"label": "Inserir",
+					"state": "produto.insert",
+					"key": "CRUD-Produto"
+				},
+				{
+					"type": "item",
+					"label": "Listagem",
+					"state": "produto.list",
+					"key": "CRUD-Produto"
+				}
+			]
+	},
+
+	{
+		"type": "item",
+		"label": "Welcome",
+		"state": "welcome",
+		"icon": "home",
+		"key": "CRUD-BASE"
+	},
+	{
+		"type": "item",
+		"label": "Configurations",
+		"icon": "settings",
+		"key": "CONFIGURATION",
+		"children": [
+			{
+				"type": "item",
+				"label": "Custom Fields",
+				"key": "CUSTOMFIELDS",
+				"state": "gumgacustomfield.list",
+				"icon": "text_fields"
+			},
+			{
+				"type": "item",
+				"label": "Tags",
+				"key": "TAGS",
+				"state": "gumgatagdefinition.list",
+				"icon": "label"
+			}
+		]
+	}
+]
