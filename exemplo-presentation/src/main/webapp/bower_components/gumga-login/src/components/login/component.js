@@ -173,7 +173,7 @@ let LoginComponent = {
             user.profileImage = 'data:' + user.picture.mimeType + ';base64,' + user.picture.bytes;
             return;
         }
-        user.profileImage = 'resources/src/images/user-without-image.png';
+        user.profileImage = 'src/images/user-without-image.png';
     }
 
     ctrl.submit = (email, password) => {

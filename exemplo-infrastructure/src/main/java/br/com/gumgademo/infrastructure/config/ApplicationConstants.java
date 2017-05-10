@@ -7,7 +7,7 @@ import java.util.Properties;
 @Component
 public class ApplicationConstants implements GumgaValues {
 
-    private static final String DEFAULT_SECURITY_URL = "http://localhost";
+    private static final String DEFAULT_SECURITY_URL = "http://192.168.25.250";
     private Properties properties;
 
     public ApplicationConstants() {

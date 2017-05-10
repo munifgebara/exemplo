@@ -28,11 +28,27 @@ import org.springframework.web.multipart.MultipartFile;
 @Transactional
 public class ProdutoAPI extends GumgaAPI<Produto, Long> {
 
+    @Autowired
+    public ProdutoAPI(GumgaService<Produto, Long> service) {
+        super(service);
+    }
 
-@Autowired
-public ProdutoAPI(GumgaService<Produto, Long> service) {
-    super(service);
-}
+    @Override
+    @Transactional
+    public void doAction(String acao, Produto p) {
+        p = service.view(p.getId());
+        if (p == null) {
+            return;
+        }
+        if ("SOBE".equals(acao)) {
+            System.out.println(acao);
+            p.setNome(p.getNome().toUpperCase());
+        }
+        if ("DESCE".equals(acao)) {
+            System.out.println(acao);
+            p.setNome(p.getNome().toLowerCase());
+        }
 
+    }
 
 }

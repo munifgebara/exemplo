@@ -21,6 +21,7 @@
         ,"id": "id"
         ,"nome":"Nome"
         ,"quantidade":"Quantidade"
+        ,"categoria": "Categoria do Produto"
     }
 
     ,"categoria":{
@@ -53,7 +54,13 @@
         ,"id": "id"
         ,"cliente":"Cliente"
         ,"itens":"Itens"
+    },
+    "itempedido": {
+        "title": "Item"
+        ,"quantidade": "Quantidade do pedido"
+        ,"produto": "Produto do pedido"
     }
+
 
 ,"address": {
   "cep": "CEP"

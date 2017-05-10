@@ -62,7 +62,7 @@
         </dependency>
 
 
-        <dependency>
+<!--        <dependency>
             <groupId>br.com.gumgademo</groupId>
             <artifactId>exemplo-api</artifactId>
             <exclusions>
@@ -71,7 +71,7 @@
                     <artifactId>exemplo-infrastructure</artifactId>
                 </exclusion>
             </exclusions>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>org.springframework.data</groupId>
