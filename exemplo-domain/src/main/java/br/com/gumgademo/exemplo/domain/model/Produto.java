@@ -29,6 +29,10 @@ public class Produto extends GumgaModel<Long> {
 
     @Column(name = "nome")
     private String nome;
+
+    @Column(unique = true)
+    private String sku;
+
     @Column(name = "quantidade")
     private Integer quantidade;
 
@@ -71,6 +75,14 @@ public class Produto extends GumgaModel<Long> {
 
     public void setGrupos(Set<Grupo> grupos) {
         this.grupos = grupos;
+    }
+
+    public String getSku() {
+        return sku;
+    }
+
+    public void setSku(String sku) {
+        this.sku = sku;
     }
 
 }

@@ -32,8 +32,16 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.databind.util.ISO8601DateFormat;
 import com.fasterxml.jackson.datatype.hibernate4.Hibernate4Module;
 import com.fasterxml.jackson.datatype.joda.JodaModule;
+import io.gumga.annotations.GumgaSwagger;
 import io.gumga.security.GumgaRequestFilter;
+import springfox.documentation.builders.PathSelectors;
+import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.service.ApiInfo;
+import springfox.documentation.spi.DocumentationType;
+import springfox.documentation.spring.web.plugins.Docket;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+@EnableSwagger2
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = {"br.com.gumgademo.presentation.web", "io.gumga"})
@@ -106,6 +114,33 @@ public class WebConfig extends WebMvcConfigurerAdapter implements WebApplication
     public void addInterceptors(InterceptorRegistry registry) {
         //Para utilizar o Segurança você precisa descomentar a linha abaixo.
         registry.addInterceptor(gumgaRequestFilter());
+    }
+
+    //    @Bean
+//    public Docket createApiDocumentation() {
+//        return new Docket(DocumentationType.SWAGGER_2).select().build();
+//    }
+    @Bean
+    public Docket createApiDocumentation() {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .select()
+                .apis(RequestHandlerSelectors.withMethodAnnotation(GumgaSwagger.class))
+                .paths(PathSelectors.regex("/api/.*"))
+                .build()
+                .apiInfo(apiInfo());
+    }
+
+    private ApiInfo apiInfo() {
+        ApiInfo apiInfo = new ApiInfo(
+                "Documentação",
+                "Aqui você econtrará toda documentação para as API's de integração com o FashionManager",
+                "FM-1.12.0",
+                "",
+                "Grands Sistemas - Fone: (44) 3020-0657",
+                "",
+                ""
+        );
+        return apiInfo;
     }
 
 }
