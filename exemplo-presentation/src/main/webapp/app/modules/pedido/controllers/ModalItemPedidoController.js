@@ -10,7 +10,7 @@ define([], function() {
   
 
       gumgaController.createRestMethods($scope, ProdutoService, 'produto');
-      $scope.produto.methods.search('','')
+      $scope.produto.methods.search('nome','')
 
   
 

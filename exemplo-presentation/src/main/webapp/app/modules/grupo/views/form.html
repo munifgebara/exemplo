@@ -6,6 +6,7 @@
             <div class="panel-body">
                 <form name="GrupoForm" gumga-form novalidate>
 		
+        <div class="form-group">        
 		<gmd-input>
 			<input
 					class="form-control gmd"
@@ -19,28 +20,33 @@
 					class="control-label"
 					gumga-translate-tag="grupo.nome">nome</label>
 		</gmd-input>
+        </div>
 		
 
-    <div class="col-md-6">
-        <label for="produtos" gumga-translate-tag="produto.title"></label>
-    </div>
-    
-    <div class="col-md-6">
-        <label for="grupo.produtos" gumga-translate-tag="grupo.produtos"></label>
-    </div>
+        <div class="row">
+            <div class="col-md-6">
+                 <h5 for="produtos" class="page-header" gumga-translate-tag="produto.title">qwe</h5>
+            </div>
+            
+            <div class="col-md-6">
+                <h5 for="grupo.produtos" class="page-header" gumga-translate-tag="grupo.produtos">qwe</h5>
+            </div>
+        </div>            
 
-	<div class="full-width-without-padding">
-	    <gumga-many-to-many 
-	            left-list="produto.data" 
-	            right-list="grupo.data.produtos" 
-	            left-search="produto.methods.asyncSearch('nome', param)"
-	            filter-parameters="nome"
-	            post-method="produto.methods.save(value)"
-	            authorize-add="true">
-	        <left-field>{{$value.nome}}</left-field>
-	        <right-field>{{$value.nome}}</right-field>
-	    </gumga-many-to-many>
-	</div>
+                    <div>
+                        <gumga-many-to-many
+                            left-list="produto.data"
+                            text-left="Listando {{$value}} {{$value > 1 ? 'itens': 'item'}}"
+                            right-list="grupo.data.produtos"
+                            text-right="Listando {{$value}} {{$value > 1 ? 'itens': 'item'}}"
+                            left-search="produto.methods.asyncSearch('nome', param)"
+                            filter-parameters="nome"
+                            post-method="produto.methods.save(value)"
+                            authorize-add="true">
+                            <left-field>{{$value.nome}} - Categoria: {{$value.categoria.nome}}</left-field>
+                            <right-field>{{$value.nome}} - Categoria: {{$value.categoria.nome}}</right-field>
+                            </gumga-many-to-many>
+                    </div>
 	
                     <gumga-errors label="Lista de erros" title="Lista de erros"></gumga-errors>
                     <gumga-form-buttons
