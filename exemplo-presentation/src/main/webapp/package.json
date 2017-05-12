@@ -45,7 +45,8 @@
     "typhonjs-escomplex-module": "0.0.12",
     "typhonjs-escomplex-project": "0.0.12",
     "typhonjs-plugin-manager": "0.0.6",
-    "uuid": "^3.0.1"
+    "uuid": "^3.0.1",
+    "video.js": "^5.19.2"
   },
   "dependencies": {
     "ng-annotate": "^1.2.1"

@@ -21,6 +21,7 @@ requirejs.config({
         'locale': 'i18n/angular-locale_pt-br',
         'angular-input-masks': 'bower_components/angular-input-masks/angular-input-masks.min',
         'moment-timezone': 'bower_components/moment-timezone/builds/moment-timezone-with-data.min',
+        'video-js': 'node_modules/video.js/dist/video.min',
 
         "gumga-rest-ng": "bower_components/gumga-rest-ng/dist/gumga-rest.min",
         "gumga-controller-ng": "bower_components/gumga-controller-ng/dist/gumga-controller.min",

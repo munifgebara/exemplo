@@ -1,66 +1,46 @@
 define([], function() {
 
-  ProdutoListController.$inject = ['$scope', 'ProdutoService', 'gumgaController', '$http'];
+  ProdutoListController.$inject = ['$scope', 'ProdutoService', 'gumgaController'];
 
-  function ProdutoListController($scope, ProdutoService, gumgaController, $http) {
+  function ProdutoListController($scope, ProdutoService, gumgaController) {
 
     gumgaController.createRestMethods($scope, ProdutoService, 'produto');
 
     ProdutoService.resetDefaultState();
     $scope.produto.execute('get');
-    $scope.produto.on('deleteSuccess', function(data) {
-      $scope.produto.execute('get');
-    })
 
     $scope.actions = [
-      { key: 'SOBE', label: 'Sobe' },
-      { key: 'DESCE', label: 'Desce' }
+      { key: 'option1', label: 'option1' },
+      { key: 'option2', label: 'option2' }
     ];
 
-      $scope.search = function(field, param) {
-        $scope.query = { searchFields: [field], q: param }
-        $scope.produto.methods.search(field,param)
-      }
-      $scope.advancedSearch = function(param) {
-        $scope.query = {aq: param.hql}
-        $scope.produto.methods.advancedSearch(param)
-      }
-    $scope.action = function(queryaction) {
-      if ($scope.beyond && ($scope.query || !$scope.query)) {
-        $http.post('http://localhost:8084/exemplo-api/api/produto/queryaction', queryaction)
-          .then(function(response) {
-            $scope.produto.methods.get($scope.page)
-          })
-      } else {
-        $http.post('http://localhost:8084/exemplo-api/api/produto/selectedaction', queryaction)
-          .then(function(response) {
-            $scope.produto.methods.get($scope.page)
-          })
-      }
+    $scope.search = function(field, param) {
+      $scope.query = { searchFields: [field], q: param }
+      $scope.produto.methods.search(field,param)
     }
-    // $scope.action = function(queryaction) {
-    //   console.log(queryaction);
-    // }
+
+    $scope.advancedSearch = function(param) {
+      $scope.produto.methods.advancedSearch(param)
+    }
+
+    $scope.action = function(queryaction) {
+      console.log(queryaction);
+    }
 
     $scope.tableConfig = {
-      columns: 'nome, quantidade, categoria ,button',
+      columns: 'nome , quantidade, button',
       checkbox: true,
-      selection: 'multi',
       columnsConfig: [{
         name: 'nome',
         title: '<span gumga-translate-tag="produto.nome"> nome </span>',
         content: '{{$value.nome }}',
         sortField: 'nome'
-      },{
+      },
+      {
         name: 'quantidade',
         title: '<span gumga-translate-tag="produto.quantidade"> quantidade </span>',
         content: '{{$value.quantidade }}',
         sortField: 'quantidade'
-      },{
-        name: 'categoria',
-        title: '<span gumga-translate-tag="produto.categoria"> categoria </span>',
-        content: '{{$value.categoria.nome }}',
-        sortField: 'categoria'
       }, {
         name: 'button',
         title: ' ',

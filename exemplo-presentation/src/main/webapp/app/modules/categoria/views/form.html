@@ -5,28 +5,33 @@
             </div>
             <div class="panel-body">
                 <form name="CategoriaForm" gumga-form novalidate>
-		
-		<gmd-input>
-			<input
-					class="form-control gmd"
-					type="text"
-                    name="nome"
-					gumga-error
-                    ng-model="categoria.data.nome"
-					/>
-			<span class="bar"></span>
-			<label
-					class="control-label"
-					gumga-translate-tag="categoria.nome">nome</label>
-		</gmd-input>
+
+                    <gmd-input>
+                        <input
+                            class="form-control gmd"
+                            type="text"
+                            name="nome"
+                            gumga-error
+                            ng-model="categoria.data.nome"
+                            />
+                        <span class="bar"></span>
+                        <label
+                            class="control-label"
+                            gumga-translate-tag="categoria.nome">nome</label>
+                    </gmd-input>
+                    
+                    
+                    
+                    <gumga-custom-fields use-labels="true" fields="categoria.data"></gumga-custom-fields>
+                    
                     <gumga-errors label="Lista de erros" title="Lista de erros"></gumga-errors>
                     <gumga-form-buttons
-                            back="categoria.list"
-                            submit="categoria.methods.put(categoria.data)"
-                            position="right"
-                            valid="CategoriaForm.$valid"
-                            confirm-dirty="true"
-                            continue="continue">
+                        back="categoria.list"
+                        submit="categoria.methods.put(categoria.data)"
+                        position="right"
+                        valid="CategoriaForm.$valid"
+                        confirm-dirty="true"
+                        continue="continue">
                     </gumga-form-buttons>
                 </form>
             </div>

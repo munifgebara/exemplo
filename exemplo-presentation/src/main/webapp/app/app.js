@@ -36,7 +36,8 @@ define(function (require) {
     require('gumga-query-action-ng');
 
     require('app/apiLocations');
-    require('app/modules/login/module');
+    require('app/modules/welcome/module');        
+    require('app/modules/login/module');    
     require('app/modules/common/module');
     require('app/modules/gumgatagdefinition/module');
     require('app/modules/gumgacustomfield/module');
@@ -79,6 +80,7 @@ define(function (require) {
                 , 'ngSanitize'
                 , 'ui.bootstrap'
                 , 'gumga.core'
+                , 'app.welcome'
                 , 'app.login'
                 , 'app.base'
                 , 'app.gumgatagdefinition'

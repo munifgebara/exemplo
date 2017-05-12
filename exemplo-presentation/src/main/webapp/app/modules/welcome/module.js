@@ -5,6 +5,8 @@ define(function (require) {
     require('angular');
     require('angular-ui-router');
 
+
+    WelcomeConfiguration.$inject = ['$stateProvider'];
     function WelcomeConfiguration($stateProvider) {
         $stateProvider
             .state('welcome.home', {
@@ -12,7 +14,7 @@ define(function (require) {
                 templateUrl: 'app/modules/welcome/views/welcome.html'
             });
     }
-    WelcomeConfiguration.$inject = ['$stateProvider'];
+   
 
     return angular.module('app.welcome', ['ui.router']).config(WelcomeConfiguration);
 });

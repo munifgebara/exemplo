@@ -1,27 +1,26 @@
 <form name="Modal">
-	<div class="modal-header">
-		<h3 class="modal-title" gumga-translate-tag="itempedido.title"></h3>
-	</div>
-	<div class="modal-body" style="overflow: auto">
+    <div class="modal-header">
+        <h3 class="modal-title" gumga-translate-tag="itempedido.title"></h3>
+    </div>
+    <div class="modal-body" style="overflow: auto">
 
-		<div class="form-group">
-			<gmd-input>
-				<input class="form-control gmd" type="text" name="quantidade" gumga-error ng-model="pedido.data.quantidade" />
-				<span class="bar"></span>
-				<label class="control-label" gumga-translate-tag="itempedido.quantidade">quantidade</label>
-			</gmd-input>
-		</div>
+        <div class="form-group">
+            <label gumga-translate-tag="pedido.produto">produto</label>
+            <gumga-many-to-one class="gmd" name="produto" value="pedido.data.produto" search-method="produto.methods.asyncSearch('nome', param)" field="nome" authorize-add="false" display-info="false" post-method="produto.methods.asyncPost(value, 'nome')">
+            </gumga-many-to-one>
+        </div>
 
-		<div class="form-group">
-			<label gumga-translate-tag="itempedido.produto">produto</label>
-			<gumga-many-to-one class="gmd" name="produto" value="pedido.data.produto" search-method="produto.methods.asyncSearch('nome', param)"
-				field="nome" authorize-add="true" display-info="false" post-method="produto.methods.asyncPost(value, 'nome')">
-			</gumga-many-to-one>
-		</div>
-	</div>
-	<div class="clearfix"></div>
-	<div class="modal-footer">
-		<button type="button" class="btn btn-primary" ng-click="ok(pedido.data)" ng-disabled="Modal.$invalid">OK</button>
-		<button type="button" class="btn btn-warning" ng-click="cancel()">Cancel</button>
-	</div>
+        <div class="form-group">
+            <gmd-input>
+                <input class="form-control gmd" type="text" name="quantidade" gumga-error ng-model="pedido.data.quantidade" />
+                <span class="bar"></span>
+                <label class="control-label" gumga-translate-tag="pedido.quantidade">quantidade</label>
+            </gmd-input>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" ng-click="ok(pedido.data)" ng-disabled="Modal.$invalid">OK</button>
+        <button type="button" class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    </div>
 </form>

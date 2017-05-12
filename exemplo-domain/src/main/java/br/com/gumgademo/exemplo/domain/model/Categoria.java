@@ -14,15 +14,17 @@ import org.hibernate.search.annotations.Indexed;
 import org.hibernate.envers.Audited;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import io.gumga.domain.GumgaMultitenancyPolicy;
+import io.gumga.domain.customfields.GumgaCustomizableModel;
 
-@GumgaMultitenancy
+@GumgaMultitenancy(policy = GumgaMultitenancyPolicy.ORGANIZATIONAL)
 @Audited
 @Entity(name = "Categoria")
 @Table(name = "Categoria", indexes = {
     @Index(name = "Categoria_gum_oi", columnList = "oi")
 })
 @SequenceGenerator(name = GumgaModel.SEQ_NAME, sequenceName = "SEQ_Categoria")
-public class Categoria extends GumgaModel<Long> {
+public class Categoria extends GumgaCustomizableModel<Long> {
 
     @Version
     @Column(name = "version")

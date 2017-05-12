@@ -107,7 +107,7 @@ public class WebConfig extends WebMvcConfigurerAdapter implements WebApplication
 
     @Bean
     public GumgaRequestFilter gumgaRequestFilter() {
-        return new GumgaRequestFilter("br.com.gumgademo.exemplo");
+        return new GumgaRequestFilter("br.com.portolan.mpsoftware.erp");
     }
 
     @Override

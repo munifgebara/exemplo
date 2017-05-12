@@ -8,9 +8,8 @@ define([], function() {
     gumgaController.createRestMethods($scope, GumgaCustomFieldService, 'gumgacustomfield');
 
     $scope.clazzes = [
-      {label: 'ClasseA', value: 'br.pacote.domain.model.ClasaseA'},
-      {label: 'ClasseB', value: 'br.pacote.domain.model.ClasaseB'},
-      {label: 'ClasseC', value: 'br.pacote.domain.model.ClasaseC'}
+      {label: 'Categoria', value: 'br.com.gumgademo.exemplo.domain.model.Categoria'}
+ 
     ];
     $scope.customFields = [
       {label: 'Texto', value: 'TEXT'},

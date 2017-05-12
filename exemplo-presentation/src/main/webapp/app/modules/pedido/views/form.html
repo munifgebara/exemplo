@@ -5,31 +5,25 @@
             </div>
             <div class="panel-body">
                 <form name="PedidoForm" gumga-form novalidate>
-                    <div class="form-group">
-                        <gmd-input>
-                            <input class="form-control gmd" type="text" name="cliente" gumga-error ng-model="pedido.data.cliente" />
-                            <span class="bar"></span>
-                            <label class="control-label" gumga-translate-tag="pedido.cliente">cliente</label>
-                        </gmd-input>
-                    </div>
-                    <div class="form-group">
+
+                    <gmd-input>
+                        <input class="form-control gmd" type="text" name="cliente" gumga-error ng-model="pedido.data.cliente" />
+                        <span class="bar"></span>
+                        <label class="control-label" gumga-translate-tag="pedido.cliente">cliente</label>
+                    </gmd-input>
+
+
+                    <div class="full-width-without-padding">
                         <label for="itens" gumga-translate-tag="pedido.itens"></label>
-                        <gumga-one-to-many
-                            children="pedido.data.itens"
-                            template-url="app/modules/pedido/views/modalItemPedido.html"
-                            displayable-property="quantidade"
-                            edit-button-class="gmd btn btn-primary pull-right"
-                            remove-button-class="gmd btn btn-danger pull-right"
-                            controller="ModalItemPedidoController">
+
+                        <gumga-one-to-many property="quantidade" children="pedido.data.itens" template-url="app/modules/pedido/views/modalItemPedido.html" displayable-property="quantidade" controller="ModalItemPedidoController">
                         </gumga-one-to-many>
                     </div>
                     <gumga-errors label="Lista de erros" title="Lista de erros"></gumga-errors>
-                    <gumga-form-buttons back="pedido.list" submit="pedido.methods.put(pedido.data)" position="right" valid="PedidoForm.$valid"
-                        confirm-dirty="true" continue="continue">
+                    <gumga-form-buttons back="pedido.list" submit="pedido.methods.put(pedido.data)" position="right" valid="PedidoForm.$valid" confirm-dirty="true" continue="continue">
                     </gumga-form-buttons>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
-</div>
 </div>
