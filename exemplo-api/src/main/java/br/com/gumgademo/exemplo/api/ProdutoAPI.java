@@ -2,7 +2,7 @@ package br.com.gumgademo.exemplo.api;
 
 import br.com.gumgademo.exemplo.application.service.ProdutoService;
 import br.com.gumgademo.exemplo.domain.model.Produto;
-import br.com.gumgademo.exemplo.utils.ExemploUtil;
+import br.com.gumgademo.exemplo.utils.ExemploUtil;       
 import com.wordnik.swagger.annotations.ApiOperation;
 import io.gumga.annotations.GumgaSwagger;
 import io.gumga.application.GumgaService;
